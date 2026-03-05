@@ -1,5 +1,4 @@
 import os
-import subprocess
 import streamlit as st
 from sqlalchemy import create_engine
 
@@ -30,10 +29,10 @@ def check_setup():
             setup_database()
             st.rerun()
 
-    # Check and create model
     if not os.path.exists("models/default_scorer.pkl"):
         with st.spinner("Training model (takes ~1 min)..."):
-            subprocess.run(["python", "models/train_model.py"], check=True)
+            from models.train_model import train_models
+            train_models()
             st.rerun()
 
 
