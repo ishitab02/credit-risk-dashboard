@@ -8,7 +8,7 @@ An interactive credit risk analytics dashboard built with Streamlit, analyzing 3
 
 ## Live Demo
 
-[View Live Dashboard](https://your-app-name.streamlit.app) 
+[View Live Dashboard](https://loan-risk-analytics.streamlit.app) 
 
 ## Features
 
