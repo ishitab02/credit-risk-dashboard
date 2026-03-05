@@ -8,7 +8,7 @@ An interactive credit risk analytics dashboard built with Streamlit, analyzing 3
 
 ## Live Demo
 
-[View Live Dashboard](https://your-app-name.streamlit.app) *(Update after deployment)*
+[View Live Dashboard](https://your-app-name.streamlit.app) 
 
 ## Features
 
@@ -38,13 +38,13 @@ An interactive credit risk analytics dashboard built with Streamlit, analyzing 3
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/credit-risk-dashboard.git
+git clone https://github.com/ishitab02/credit-risk-dashboard.git
 cd credit-risk-dashboard
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the app (auto-initializes DB and models on first run)
+# Run the app 
 streamlit run app.py
 ```
 
@@ -103,7 +103,3 @@ credit-risk-dashboard/
 [Home Credit Default Risk](https://www.kaggle.com/c/home-credit-default-risk) - Kaggle Competition Dataset
 
 ---
-
-## License
-
-MIT License - See [LICENSE](LICENSE) file
