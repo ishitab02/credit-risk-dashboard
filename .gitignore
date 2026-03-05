@@ -6,14 +6,12 @@ __pycache__/
 venv/
 env/
 .venv/
-data/sample/
 database/
 models/*.pkl
 .idea/
 .vscode/
 *.swp
 *.swo
-.claude/
 .DS_Store
 Thumbs.db
 .streamlit/secrets.toml
