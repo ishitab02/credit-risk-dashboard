@@ -22,11 +22,10 @@ def get_db_engine():
 
 def check_setup():
     """Ensures database and model are set up."""
-    # Check and create database
     if not os.path.exists("database/credit_risk.db"):
-        with st.spinner("Setting up database for first time (takes ~2 min)..."):
-            from src.db_setup import setup_database
-            setup_database()
+        with st.spinner("Running ETL pipeline for first time (takes ~2 min)..."):
+            from src.pipeline import run_pipeline
+            run_pipeline(force=True)
             st.rerun()
 
     if not os.path.exists("models/default_scorer.pkl"):
@@ -36,14 +35,11 @@ def check_setup():
             st.rerun()
 
 
-# Ensure setup is complete
 check_setup()
 
-# Store engine in session state for pages to access
 if 'engine' not in st.session_state:
     st.session_state.engine = get_db_engine()
 
-# Home page content
 st.title("Credit Risk Analytics Dashboard")
 st.markdown("---")
 
@@ -61,13 +57,14 @@ This dashboard analyzes **307,511 loan applications** to help identify borrowers
 | **Default Drivers** | Correlation analysis to identify default predictors |
 | **SQL Explorer** | Query the database directly with custom SQL |
 | **Default Scorer** | Predict default probability for a borrower |
+| **Pipeline Monitor** | ETL pipeline health, DAG, SLA alerts, DQ checks, and run history |
+| **Data Profiler** | Column statistics, null patterns, and distribution analysis |
 
 ---
 
 ### Quick Stats
 """)
 
-# Show quick KPIs on home page
 from src.queries import get_portfolio_kpis
 
 engine = st.session_state.engine
