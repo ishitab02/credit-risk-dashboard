@@ -100,6 +100,6 @@ credit-risk-dashboard/
 
 ## Data Source
 
-[Home Credit Default Risk](https://www.kaggle.com/c/home-credit-default-risk) - Kaggle Competition Dataset
+ Dataset has been taken from [Home Credit Default Risk](https://www.kaggle.com/c/home-credit-default-risk) - Kaggle Competition Dataset
 
 ---
